@@ -10,7 +10,6 @@
 
 <body>
   <!-- To run this file right click the file in the navigation bar and select "Open with live server. Then open the developer tools in the browser and head to the console window."-->
-
   <!-- Use this element to render your menu -->
   <ul id="menu"></ul>
 
@@ -34,7 +33,21 @@
       }
     ]
     // Write your code here
+    const vegeterianDishes = menu.filter(dish => dish.isVegetarian)
+    const printVeggyDishes = document.getElementById('menu');
 
+    // vegeterianDishes.map(veggyDish => {
+    //   printVeggyDishes.innerHTML += `
+    //     <li>${veggyDish.name}</li>
+    //   `
+    // });
+
+    vegeterianDishes.map(veggyDish => {
+      let dish = document.createElement('li');
+      dish.textContent = veggyDish.name;
+      printVeggyDishes.appendChild(dish)
+    })
+      
   </script>
 </body>
 

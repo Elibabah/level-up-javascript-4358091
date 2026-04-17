@@ -31,3 +31,22 @@ class Book {
 }
 
 // Write your code here
+
+
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition) {
+    super(title, author, ISBN, numCopies);
+    this.edition = edition;
+  }
+
+  get editionBook() {
+    return this.getEdition();
+  }
+
+  getEdition() {
+    return this.edition;
+  }
+}
+
+const myBook = new TechnicalBook("JavaScript: The Definitive Guide", "David Flanagan", "978-0596100292", 5, "7th");
+console.log(myBook.editionBook); // Output: 7th
