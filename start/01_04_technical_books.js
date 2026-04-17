@@ -31,8 +31,6 @@ class Book {
 }
 
 // Write your code here
-
-
 class TechnicalBook extends Book {
   constructor(title, author, ISBN, numCopies, edition) {
     super(title, author, ISBN, numCopies);
@@ -44,9 +42,9 @@ class TechnicalBook extends Book {
   }
 
   getEdition() {
-    return this.edition;
+    return `The current version of this book is ${this.edition}`;
   }
 }
 
 const myBook = new TechnicalBook("JavaScript: The Definitive Guide", "David Flanagan", "978-0596100292", 5, "7th");
-console.log(myBook.editionBook); // Output: 7th
+console.log(myBook.editionBook); // Output: The current version of this book is 7th
